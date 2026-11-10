@@ -1,0 +1,64 @@
+<!-- === SECTION 1: DOCUMENT HEAD & IMPORTS === -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdraws</title> 
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="withdraws.css">
+</head>
+<body>
+    <!-- === SECTION 2: HARDWARE SCREEN BOUNDARY === -->
+    <div class="atm-screen">
+        
+        <!-- === SECTION 3: HEADER === -->
+        <header class="atm-header">
+            <h1>Withdraws</h1>
+            <p>Please select how much you wish to withdraw.</p>
+        </header>
+        
+        <!-- === SECTION 4: WITHDRAWAL MENU (MODIFIED MODULAR BUTTONS) === -->
+        <main class="atm-main-content">
+            <section class="atm-menu">
+                <button id="btn-20" class="menu-btn btn-thin" tabindex="0" aria-label="Withdraw 20 Dollars">
+                    <span aria-hidden="true">$20.00</span>
+                </button>
+                <button id="btn-40" class="menu-btn btn-thin" tabindex="0" aria-label="Withdraw 40 Dollars">
+                    <span aria-hidden="true">$40.00</span>
+                </button>
+                <button id="btn-60" class="menu-btn btn-thin" tabindex="0" aria-label="Withdraw 60 Dollars">
+                    <span aria-hidden="true">$60.00</span>
+                </button>
+                <button id="btn-custom" class="menu-btn btn-thin" tabindex="0" aria-label="Custom Withdraw">
+                    <span aria-hidden="true">Custom Withdraw</span>
+                </button>
+            </section>
+        </main>
+        
+        <!-- === SECTION 5: FOOTER NAVIGATION === -->
+        <footer>
+            <button id="btn-cancel" class="menu-btn cancel-btn" tabindex="0" aria-label="Cancel Transaction">
+                <span aria-hidden="true">Cancel Transaction</span>
+            </button>
+        </footer>
+
+        <!-- === SECTION 6: OVERLAYS & SCRIPTS === -->
+        <div id="timeout-warning" class="overlay hidden" aria-live="assertive">
+            <h2>Are you still there?</h2>
+            <p>Press ENTER to continue.</p>
+        </div>
+            
+        <div id="status-overlay" class="overlay hidden" aria-live="assertive">
+            <h2 id="status-title">Processing...</h2>
+            <p id="status-message">Please wait while we contact your bank.</p>
+            <button id="btn-status-close" class="menu-btn hidden" tabindex="0">
+                <span aria-hidden="true">Return to Menu</span>
+            </button>
+        </div>
+        
+        <script src="global.js"></script>
+        <script src="withdraws.js"></script>
+    </div>
+</body>
+</html>

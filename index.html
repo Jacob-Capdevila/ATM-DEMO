@@ -1,0 +1,57 @@
+<!-- === SECTION 1: DOCUMENT HEAD & IMPORTS === -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Kiosk Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- === SECTION 2: HARDWARE SCREEN BOUNDARY === -->
+    <div class="atm-screen">
+        
+        <!-- === SECTION 3: HEADER === -->
+        <header class="atm-header">
+            <h1>Welcome to Bank of Banks</h1>
+            <p>Please select from the following options</p>
+        </header>
+        
+        <!-- === SECTION 4: MAIN MENU === -->
+        <main class="atm-main-content">
+            <section class="atm-menu">
+                <button id="btn-balance" class="menu-btn" tabindex="0" aria-label="Balance Inquiry">
+                    <span aria-hidden="true">Balance Inquiry</span>
+                </button>
+                <button id="btn-withdraw" class="menu-btn" tabindex="0" aria-label="Withdraw Cash">
+                    <span aria-hidden="true">Withdraw</span>
+                </button>
+                <button id="btn-transfer" class="menu-btn" tabindex="0" aria-label="Transfer Cash">
+                    <span aria-hidden="true">Transfer</span>
+                </button>
+            </section>
+        </main>
+        
+        <!-- === SECTION 5: FOOTER NAVIGATION === -->
+        <footer>
+            <button id="btn-cancel" class="menu-btn cancel-btn" tabindex="0" aria-label="Cancel Transaction">
+                <span aria-hidden="true">Cancel Transaction</span>
+            </button>
+        </footer>
+
+        <!-- === SECTION 6: OVERLAYS & SCRIPTS === -->
+        <div id="idle-screen" class="overlay" aria-live="polite">
+            <h2>Welcome to Bank of Banks</h2>
+            <p>Please insert your card or tap screen to begin.</p>
+        </div>
+
+        <div id="timeout-warning" class="overlay hidden" aria-live="assertive">
+            <h2>Are you still there?</h2>
+            <p>Press ENTER to continue.</p>
+        </div>
+
+        <script src="global.js"></script>
+        <script src="index.js"></script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+/* === SECTION 1: GLOBAL RESET & BODY === */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background-color: #1a1a1a; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: Arial, sans-serif; }
+
+/* === SECTION 2: HARDWARE SCREEN BOUNDARIES === */
+.atm-screen { width: 1024px; height: 768px; background-color: #ffffff; position: relative; overflow: hidden; border: 12px solid #333; border-radius: 8px; display: flex; flex-direction: column; }
+
+/* === SECTION 3: HEADER & FOOTER === */
+.atm-header { background-color: #004b87; color: white; text-align: center; padding: 25px 20px; height: 140px; }
+.atm-header h1 { font-size: 48px; margin-bottom: 10px; }
+footer { display: flex; justify-content: center; padding-bottom: 20px; }
+
+/* === SECTION 4: MENU BUTTONS (BASE CLASSES) === */
+.atm-main-content { flex-grow: 1; display: flex; flex-direction: column; }
+.atm-menu { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 15px; } 
+
+.menu-btn { width: 600px; padding: 20px; font-size: 32px; font-weight: bold; background-color: #e0e0e0; color: #333; border: 4px solid #ccc; border-radius: 12px; cursor: pointer; }
+.menu-btn:focus { outline: none; border-color: #ffcc00; background-color: #fff8cc; box-shadow: 0 0 15px rgba(255, 204, 0, 0.8); color: #1a1a1a; }
+.cancel-btn { background-color: #d9534f; color: white; border-color: #c9302c; margin-top: 10px; }
+
+/* === SECTION 5: OVERLAYS & UTILITIES === */
+.hidden { display: none !important; }
+.overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1000; background-color: rgba(0, 0, 0, 0.95); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+.overlay h2 { font-size: 64px; color: #ffcc00; margin-bottom: 20px; }
